@@ -16,6 +16,7 @@ public enum PatientGender {
 @sql:Mapping {name: "appointment"}
 public type Appointment record {|
     readonly int id;
+    @sql:UniqueIndex {name: "reason_index"}
     string reason;
     time:Civil appointmentTime;
     AppointmentStatus status;
@@ -47,6 +48,7 @@ public type Patient record {|
 public type Doctor record {|
     readonly int id;
     string name;
+    @sql:Index {name: "specialty_index"}
     string specialty;
     @sql:Mapping {name: "phone_number"}
     string phoneNumber;
