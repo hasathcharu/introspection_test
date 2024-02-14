@@ -32,6 +32,7 @@ public type Appointment record {|
     Doctor doctor;
 |};
 
+@sql:Mapping {name: "patients"}
 public type Patient record {|
     @sql:Generated
     readonly int id;

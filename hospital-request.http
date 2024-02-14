@@ -3,8 +3,8 @@ POST http://localhost:9090/hospital/doctors
 Content-Type: application/json
 
 {
-    "id": 1,
-    "name": "Dr. Mouse",
+    "id": 6,
+    "name": "Test Doctor",
     "specialty": "Physician",
     "phoneNumber": "1234567890"
 }
@@ -14,7 +14,7 @@ POST http://localhost:9090/hospital/patients
 Content-Type: application/json
 
 {
-    "name": "Jane Austen",
+    "name": "Jane TEST TEST",
     "age": 30,
     "phoneNumber": "0771690000",
     "gender": "FEMALE",
@@ -26,7 +26,7 @@ POST http://localhost:9090/hospital/appointments
 Content-Type: application/json
 
 {
-    "id": 12,
+    "id": 14,
     "_patientId": 6,
     "_doctorId": 6,
     "appointmentTime": {
@@ -48,11 +48,11 @@ GET http://localhost:9090/hospital/doctors/6/appointments?year=2023&month=07&day
 GET http://localhost:9090/hospital/doctors
 
 ### Get patient details by id
-GET http://localhost:9090/hospital/patients/7
+GET http://localhost:9090/hospital/patients/12
 
 
 ### Update the status of the appointment
-PATCH  http://localhost:9090/hospital/appointments/12
+PATCH  http://localhost:9090/hospital/appointments/14
 Content-Type: application/json
 
 "STARTED"
