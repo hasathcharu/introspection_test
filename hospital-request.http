@@ -3,9 +3,9 @@ POST http://localhost:9090/hospital/doctors
 Content-Type: application/json
 
 {
-    "id": 6,
-    "name": "Dr. House",
-    "specialty": "Neurologist",
+    "id": 1,
+    "name": "Dr. Mouse",
+    "specialty": "Physician",
     "phoneNumber": "1234567890"
 }
 
@@ -14,11 +14,11 @@ POST http://localhost:9090/hospital/patients
 Content-Type: application/json
 
 {
-    "name": "Test Person",
+    "name": "Jane Austen",
     "age": 30,
     "phoneNumber": "0771690000",
-    "gender": "MALE",
-    "address": "123, Main Street, Colombo 05"
+    "gender": "FEMALE",
+    "address": "154, Secondary Street, Colombo 05"
 }
 
 ### Create an appointment
@@ -26,9 +26,9 @@ POST http://localhost:9090/hospital/appointments
 Content-Type: application/json
 
 {
-    "id": 11,
-    "patient_Id": 6,
-    "doctor_Id": 6,
+    "id": 12,
+    "_patientId": 6,
+    "_doctorId": 6,
     "appointmentTime": {
         "year": 2023,
         "month": 07,
@@ -52,7 +52,7 @@ GET http://localhost:9090/hospital/patients/7
 
 
 ### Update the status of the appointment
-PATCH  http://localhost:9090/hospital/appointments/11
+PATCH  http://localhost:9090/hospital/appointments/12
 Content-Type: application/json
 
 "STARTED"

@@ -48,6 +48,7 @@ public type Doctor record {|
     readonly int id;
     string name;
     string specialty;
+    @sql:Mapping {name: "phone_number"}
     string phoneNumber;
     Appointment[] appointments;
 |};
