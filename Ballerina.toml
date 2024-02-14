@@ -1,0 +1,25 @@
+[package]
+org = "danesh"
+name = "hospitalsvc"
+version = "0.1.0"
+distribution = "2201.7.0"
+
+[build-options]
+observabilityIncluded = true
+
+[persist]
+datastore = "mysql"
+module = "hospitalsvc.db"
+
+[persist.model.storage.mysql]
+host = "localhost"
+port = 3306
+user = "root"
+password = ""
+database = "hospital"
+
+[[platform.java11.dependency]]
+groupId = "io.ballerina.stdlib"
+artifactId = "persist.sql-native"
+version = "1.2.0"
+
